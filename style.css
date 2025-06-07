@@ -1,0 +1,165 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap');
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffcad4, #ff9aa2);
+  font-family: 'Poppins', sans-serif;
+  color: #4b1d2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  animation: backgroundPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundPulse {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Countdown Page */
+
+.countdown-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 3rem 4rem;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+  backdrop-filter: blur(10px);
+  max-width: 420px;
+  width: 90vw;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-around;
+}
+
+#countdown > div {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  min-width: 70px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#countdown > div:hover {
+  transform: scale(1.1);
+}
+
+#countdown span {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #7f1d3c;
+}
+
+#countdown small {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a24a66;
+}
+
+/* Shared Page Container */
+
+.page-container {
+  max-width: 600px;
+  margin: 2rem auto 4rem auto;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+  backdrop-filter: blur(10px);
+  color: #4b1d2f;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.message-box {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  white-space: pre-line;
+  margin-bottom: 2rem;
+}
+
+.confession-box p {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #7f1d3c;
+  font-family: 'Great Vibes', cursive;
+}
+
+.timeline {
+  border-left: 4px solid #ff8aa3;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  max-width: 580px;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-date {
+  font-weight: 700;
+  color: #b42f5c;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-family: 'Great Vibes', cursive;
+  text-align: left;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+  
+.next-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #7f1d3c;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-end;
+}
+
+.next-link:hover {
+  color: #b42f5c;
+  text-decoration: underline;
+}

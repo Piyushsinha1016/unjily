@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Angelie’s 18th Countdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="countdown-container">
+    <h1>Counting down to Angelie's 18th Birthday 🎂</h1>
+    <p>Philippine Time (GMT+8)</p>
+    <div id="countdown">
+      <div>
+        <span id="days">0</span>
+        <small>Days</small>
+      </div>
+      <div>
+        <span id="hours">00</span>
+        <small>Hours</small>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <small>Minutes</small>
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 🎯 Target: June 22, 2025 at 00:00:00 in GMT+8 (Philippine Time)
+    const targetDate = new Date('June 22, 2025 00:00:00 GMT+0800');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        // Redirect when countdown is over
+        window.location.href = "birthday.html";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    // Initial call and interval update
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
